@@ -1,0 +1,127 @@
+[root]
+name = "hello-spidermonkey"
+version = "0.1.0"
+dependencies = [
+ "js 0.1.6 (git+https://github.com/servo/rust-mozjs)",
+]
+
+[[package]]
+name = "cmake"
+version = "0.1.24"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "gcc 0.3.51 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "gcc"
+version = "0.3.51"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "heapsize"
+version = "0.4.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "kernel32-sys 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "js"
+version = "0.1.6"
+source = "git+https://github.com/servo/rust-mozjs#3de4ff3d52361a47a17e3b4fcb02c779b99d93d4"
+dependencies = [
+ "cmake 0.1.24 (registry+https://github.com/rust-lang/crates.io-index)",
+ "heapsize 0.4.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "lazy_static 0.2.8 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.28 (registry+https://github.com/rust-lang/crates.io-index)",
+ "log 0.3.8 (registry+https://github.com/rust-lang/crates.io-index)",
+ "mozjs_sys 0.0.0 (git+https://github.com/servo/mozjs)",
+ "num-traits 0.1.40 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "kernel32-sys"
+version = "0.2.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "winapi 0.2.8 (registry+https://github.com/rust-lang/crates.io-index)",
+ "winapi-build 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "lazy_static"
+version = "0.2.8"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "libc"
+version = "0.2.28"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "libz-sys"
+version = "1.0.16"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "gcc 0.3.51 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.28 (registry+https://github.com/rust-lang/crates.io-index)",
+ "pkg-config 0.3.9 (registry+https://github.com/rust-lang/crates.io-index)",
+ "vcpkg 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "log"
+version = "0.3.8"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "mozjs_sys"
+version = "0.0.0"
+source = "git+https://github.com/servo/mozjs#834ce35c3f008010213351107b68f397989d2ffd"
+dependencies = [
+ "libc 0.2.28 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libz-sys 1.0.16 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "num-traits"
+version = "0.1.40"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "pkg-config"
+version = "0.3.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "vcpkg"
+version = "0.2.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "winapi"
+version = "0.2.8"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "winapi-build"
+version = "0.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[metadata]
+"checksum cmake 0.1.24 (registry+https://github.com/rust-lang/crates.io-index)" = "b8ebbb35d3dc9cd09497168f33de1acb79b265d350ab0ac34133b98f8509af1f"
+"checksum gcc 0.3.51 (registry+https://github.com/rust-lang/crates.io-index)" = "120d07f202dcc3f72859422563522b66fe6463a4c513df062874daad05f85f0a"
+"checksum heapsize 0.4.1 (registry+https://github.com/rust-lang/crates.io-index)" = "54fab2624374e5137ae4df13bf32b0b269cb804df42d13a51221bbd431d1a237"
+"checksum js 0.1.6 (git+https://github.com/servo/rust-mozjs)" = "<none>"
+"checksum kernel32-sys 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)" = "7507624b29483431c0ba2d82aece8ca6cdba9382bff4ddd0f7490560c056098d"
+"checksum lazy_static 0.2.8 (registry+https://github.com/rust-lang/crates.io-index)" = "3b37545ab726dd833ec6420aaba8231c5b320814b9029ad585555d2a03e94fbf"
+"checksum libc 0.2.28 (registry+https://github.com/rust-lang/crates.io-index)" = "bb7b49972ee23d8aa1026c365a5b440ba08e35075f18c459980c7395c221ec48"
+"checksum libz-sys 1.0.16 (registry+https://github.com/rust-lang/crates.io-index)" = "3fdd64ef8ee652185674455c1d450b83cbc8ad895625d543b5324d923f82e4d8"
+"checksum log 0.3.8 (registry+https://github.com/rust-lang/crates.io-index)" = "880f77541efa6e5cc74e76910c9884d9859683118839d6a1dc3b11e63512565b"
+"checksum mozjs_sys 0.0.0 (git+https://github.com/servo/mozjs)" = "<none>"
+"checksum num-traits 0.1.40 (registry+https://github.com/rust-lang/crates.io-index)" = "99843c856d68d8b4313b03a17e33c4bb42ae8f6610ea81b28abe076ac721b9b0"
+"checksum pkg-config 0.3.9 (registry+https://github.com/rust-lang/crates.io-index)" = "3a8b4c6b8165cd1a1cd4b9b120978131389f64bdaf456435caa41e630edba903"
+"checksum vcpkg 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)" = "9e0a7d8bed3178a8fb112199d466eeca9ed09a14ba8ad67718179b4fd5487d0b"
+"checksum winapi 0.2.8 (registry+https://github.com/rust-lang/crates.io-index)" = "167dc9d6949a9b857f3451275e911c3f44255842c1f7a76f33c55103a909087a"
+"checksum winapi-build 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)" = "2d315eee3b34aca4797b2da6b13ed88266e6d612562a0c46390af8299fc699bc"
