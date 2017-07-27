@@ -21,13 +21,25 @@ fn main() {
                                &CompartmentOptions::default())
         );
         rooted!(in(cx) let mut rval = UndefinedValue());
-        println!("evaluate: {:?} result: {:?}", 
-		rt.evaluate_script(global.handle() 
-						,"1 + 1"
-						,"test" 
-						,1 
-						,rval.handle_mut()
-					).is_ok(),
-					rval.to_number());
+        let result = rt.evaluate_script(
+                global.handle(),
+                "console.log(\"hello world\")",
+                "test.js",
+                1,
+                rval.handle_mut());
+        let thing = match rval {
+            is_object() => "object",
+            is_symbol() => "symbol",
+            _ => "no idea"
+        };
+
+        println!(
+            // "evaluate: {:?} result: {:?}",
+            "evaluate: {:?}\nthing: {:?}",            
+            result.is_ok(),
+            thing
+        );
+
     }
 }
+
